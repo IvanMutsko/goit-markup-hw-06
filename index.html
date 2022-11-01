@@ -357,7 +357,7 @@
           </address>
         </div>
         <div class="footer-social-container">
-          <h2 class="subscribe">приєднуйтесь</h2>
+          <h2 class="subscribe-title">приєднуйтесь</h2>
           <ul class="footer-social-list">
             <li>
               <a href="" class="link socials-link">
@@ -389,28 +389,62 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe-container">
+          <h2 class="subscribe-title">Підпишіться на розсилку</h2>
+          <form name="subscribe-newsletter">
+            <label for="subscribe-mail"></label>
+            <input
+              type="email"
+              placeholder="E-mail"
+              name="subscribe-mail"
+              class="subscribe-mail-form"
+              id="subscribe-mail"
+            />
+            <div class="subscribe-btn-wrap">
+              <button type="submit" class="footer-subscribe-btn">Підписатися</button>
+              <svg class="footer-icon-send" width="24px" height="24px">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
     <!-- MODAL WINDOW -->
-    <div class="backdrop is-hidden" data-modal>
+    <!-- повернути клас is-hidden до бекдропу -->
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="close-modal-btn" data-modal-close>
           <svg class="close-icon" width="11px" height="11px">
             <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
-        <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
-        <ul class="modal-form-list">
-          <li><input type="text" name="#" /></li>
-          <li><input type="text" name="#" /></li>
-          <li><input type="text" name="#" /></li>
-          <li><input type="text" name="#" /></li>
-        </ul>
-        <label class="checkbox">
-          <input type="checkbox" name="hobby" value="music" checked />
-          Я з чимось погоджуюсь :)
-        </label>
-        <button class="form-btn">Відправити</button>
+        <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+        <form name="modal-form">
+          <div class="form-wrap">
+            <label for="client-name">Ім'я</label>
+            <input type="text" name="client-name" id="client-name" required />
+          </div>
+          <div class="form-wrap">
+            <label for="client-tel">Телефон</label>
+            <input type="tel" name="client-tel" id="client-tel" required />
+          </div>
+          <div class="form-wrap">
+            <label for="client-email">Пошта</label>
+            <input type="email" name="client-email" id="client-email" required />
+          </div>
+          <div class="form-wrap">
+            <label for="client-comment">Коментар</label>
+            <textarea name="client-comment" class="client-comment" id="client-comment"></textarea>
+          </div>
+
+          <div>
+            <input type="checkbox" />
+            <span>Погоджуюся з розсилкою та приймаю <a href="#">Умови договору</a></span>
+          </div>
+
+          <button type="submit">Відправити</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

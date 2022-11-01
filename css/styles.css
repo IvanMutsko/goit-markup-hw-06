@@ -7,6 +7,7 @@
   --secondary-text: #757575;
   --white-text: #ffffff;
   --footer-text: rgba(255, 255, 255, 0.6);
+  --gray-border: rgba(255, 255, 255, 0.3);
   --white-background: #ffffff;
   --grey-background: #f5f4fa;
   --dark-background: #2f303a;
@@ -242,7 +243,11 @@ button {
   margin-right: 70px;
 }
 
-.subscribe {
+.footer-social-container {
+  margin-right: 93px;
+}
+
+.subscribe-title {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -281,6 +286,61 @@ button {
 .socials-link:focus {
   background-color: var(--accent-color);
   fill: var(--white-text);
+}
+
+.subscribe-mail-form {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-right: 12px;
+
+  color: var(--white-text);
+  background-color: transparent;
+  border: 1px solid var(--gray-border);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.subscribe-mail-form::placeholder {
+  color: var(--footer-text);
+}
+
+.subscribe-btn-wrap {
+  display: inline-flex;
+  position: relative;
+}
+
+.footer-icon-send {
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
+  fill: var(--white-text);
+}
+
+.footer-subscribe-btn {
+  color: var(--white-text);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: left;
+
+  width: 200px;
+  height: 50px;
+  background-color: var(--accent-color);
+  padding: 10px 28px;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px solid transparent;
+
+  transition: background-color var(--hover-duration) var(--timing-function);
+}
+
+.footer-subscribe-btn:hover,
+.footer-subscribe-btn:focus {
+  background-color: var(--accent-active);
 }
 
 /* ---------------Modal window--------------- */
@@ -344,29 +404,24 @@ button {
   fill: var(--accent-color);
 }
 
-/* ТИМЧАСОВІ ЕЛЕМЕНТИ */
+/* ---------------Modal content--------------- */
 .modal-title {
-  margin-bottom: 30px;
-  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-text);
+
+  margin-bottom: 12px;
 }
-.modal-form-list {
-  list-style: none;
-}
-.modal-form-list li {
-  margin-bottom: 30px;
-}
-.modal-form-list input {
-  width: 100%;
-  height: 40px;
-}
-.checkbox {
-  margin-bottom: 20px;
-  display: block;
-}
-.form-btn {
+
+.modal-form {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.form-wrap {
+  display: block;
 }
 
 /* ---------------studio (main page)--------------- */
